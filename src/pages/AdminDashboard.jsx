@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  FaHome,
-  FaPlus,
-  FaSignOutAlt,
-  FaTrash,
-  FaEdit,
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
+import { FaHome, FaPlus, FaSignOutAlt, FaBars, FaTimes } from "react-icons/fa";
 
 let properties = [
   {
