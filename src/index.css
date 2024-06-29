@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #e110e1;
+}
+
+.first-line {
+  width: 3rem;
+  height: 0.1rem;
+  background-color: #c60fc6;
+  margin: 0 0 0.8rem 2rem;
+}
+
+.second-line {
+  width: 3rem;
+  height: 0.1rem;
+  background-color: #c60fc6;
+  margin: 0 0 0.8rem 2rem;
+}
+
+.third-line {
+  width: 3rem;
+  height: 0.1rem;
+  background-color: #c60fc6;
+  margin: 0 0 0 2rem;
+}
+
+.rotate {
+  transform: rotateY(70deg);
+}
+
+.hidden {
+  display: none;
+}
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev {
+  background-color: #428cff;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  opacity: 0.8;
+  height: 30px;
+  width: 30px;
+}
+
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-prev:hover {
+  background-color: #2574f5;
+  opacity: 1;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+.arrows {
+  height: 20px;
+  width: 20px;
+  margin: 1px;
+}
+
+@media (max-width: 375px) {
+  .properties {
+    margin-left: 0.5rem;
+  }
+
+  .discover {
+    /* margin-left: -1rem; */
+  }
+}
+
+@media (min-width: 380px) and (max-width: 450px) {
+  .dream-home {
+    margin-top: 10.5rem;
+  }
+
+  .take-action {
+    margin-top: 16rem;
+    margin-left: 11vw;
+  }
+
+  .loading-img {
+    margin-left: 4.7rem;
+  }
+
+  .properties {
+    margin-left: 1rem;
+  }
+
+  .discover {
+    /* margin-left: -1rem; */
+  }
+}
+
+/* General adjustments for tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    padding: 0;
+    position: relative;
+    top: 0;
+  }
+
+  .navbar li {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .nav-toggle {
+    margin-right: 1rem;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .dropbtn {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

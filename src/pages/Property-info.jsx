@@ -1,0 +1,159 @@
+import React from "react";
+import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
+import { FaNairaSign, FaLocationDot, FaBed, FaBath } from "react-icons/fa6";
+import { FaRocket } from "react-icons/fa";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import duplex1 from "../img/duplex1.JPG";
+import duplex2 from "../img/duplex2.JPG";
+import duplex3 from "../img/duplex3.JPG";
+import duplex4 from "../img/duplex4.JPG";
+import duplex5 from "../img/duplex5.JPG";
+import SampleNextArrow from "../components/SampleNextArrow";
+import SamplePrevArrow from "../components/SamplePrevArrow";
+import Featured from "../components/Featured";
+
+const PropertyInfo = () => {
+  const settings = {
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    className: "slides",
+    nextArrow: <SampleNextArrow to="next" />,
+    prevArrow: <SamplePrevArrow to="prev" />,
+  };
+
+  const images = [duplex1, duplex2, duplex3, duplex4, duplex5];
+
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 200,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      className="w-full min-h-screen bg-slate-50"
+    >
+      <Navbar />
+      <div className="mt-20 pt-4 px-5 md:px-20">
+        <h3 className="font-bold text-xl md:text-2xl">
+          Luxury 5 Bedroom Duplex
+        </h3>
+        <div className="md:flex mt-4">
+          <div className="md:w-2/3 w-full">
+            <Slider {...settings}>
+              {images.map((img, index) => (
+                <div key={index}>
+                  <img
+                    src={img}
+                    alt={`Slide ${index + 1}`}
+                    className="w-full h-64 md:h-96 rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+              ))}
+            </Slider>
+            <div className="grid grid-cols-5 max-[450px]:hidden gap-1 mt-2">
+              {images.map((img, index) => (
+                <div key={index}>
+                  <img
+                    src={img}
+                    className="h-24 w-full object-cover rounded-lg"
+                    alt={`Thumbnail ${index + 1}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="md:w-1/3 w-full mt-6 md:mt-0 md:ml-6 bg-white p-4 rounded-2xl shadow-lg">
+            <ul className="grid grid-cols-2 gap-2 items-center">
+              <li className="flex font-semibold text-lg gap-1 items-center">
+                Price: <FaNairaSign />
+                120,000,000
+              </li>
+              <li className="text-gray-600 ml-4 text-sm">Posted: 11-09-2024</li>
+              <li className="flex gap-1 items-center w-[140%] text-[#992c99] text-sm">
+                <FaLocationDot className="text-[#992c99] animate-pulse" />{" "}
+                Lagos, Lekki, Osapa London
+              </li>
+              <li className="flex gap-3 ml-[4rem] items-center text-[#992c99] text-sm">
+                <span className="flex items-center gap-1">
+                  <FaBed /> 5
+                </span>
+                <span className="flex items-center gap-1">
+                  <FaBath /> 4
+                </span>
+              </li>
+            </ul>
+            <ul className="mt-6 text-sm space-y-2">
+              <li>- All rooms ensuite</li>
+              <li>- Expansive Family Lounge</li>
+              <li>- Multiple lounges</li>
+              <li>- Multiple balconies</li>
+              <li>- Fitted and furnished kitchen</li>
+              <li>- In-built 6-seater cinema</li>
+              <li>- Swimming pool</li>
+              <li>- Walk-in shower</li>
+              <li>- Walk-in closet</li>
+              <li>- Bath tub</li>
+              <li>- Large parking area</li>
+              <li>- Gated and secure estate</li>
+            </ul>
+            <div data className="mt-8">
+              <h3 className="mb-3 font-semibold text-lg">Book Physical Tour</h3>
+              <form>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="First name"
+                  className="border border-gray-400 mb-2 py-2 px-3 rounded w-full"
+                />
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Last name"
+                  className="border border-gray-400 mb-2 py-2 px-3 rounded w-full"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone number"
+                  className="border border-gray-400 mb-2 py-2 px-3 rounded w-full"
+                />
+                <input
+                  type="text"
+                  name="interested property"
+                  id="interested-property"
+                  value={"propertyID"}
+                  className="hidden"
+                />
+                <button
+                  className="py-2 px-3 flex justify-center items-center gap-2 mt-2 bg-[#992c99] text-white rounded-lg hover:bg-[#6d1f6d] w-full"
+                  type="submit"
+                >
+                  Book Tour <FaRocket className="animate-bounce" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured */}
+        <Featured />
+      </div>
+    </motion.div>
+  );
+};
+
+export default PropertyInfo;
