@@ -19,11 +19,11 @@ const Header = () => {
       viewport={{
         amount: "all",
       }}
-      className="w-[100vw] h-[100vh]"
+      className="w-[99vw] h-[100vh]"
     >
       {/* Background video */}
       <video
-        className="w-[100vw] max-[450px]:h-[90vh] h-[93vh] mt-[-1rem] absolute object-cover z-[-1]"
+        className="w-[99vw] max-[450px]:h-[90vh] h-[93vh] mt-[-1rem] absolute object-cover z-[-1]"
         src={videoBg}
         autoPlay
         loop

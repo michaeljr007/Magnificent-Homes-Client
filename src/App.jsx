@@ -10,6 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import FloatingButton from "./components/FloatingButton";
 import NewsletterForm from "./components/NewsLetterForm";
+import Navbar from "./components/Navbar";
 
 function App() {
   // Preloader state

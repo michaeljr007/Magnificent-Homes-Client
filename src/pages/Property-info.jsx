@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import { motion } from "framer-motion";
 import { FaNairaSign, FaLocationDot, FaBed, FaBath } from "react-icons/fa6";
 import { FaRocket } from "react-icons/fa";
+import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,8 +14,11 @@ import duplex5 from "../img/duplex5.JPG";
 import SampleNextArrow from "../components/SampleNextArrow";
 import SamplePrevArrow from "../components/SamplePrevArrow";
 import Featured from "../components/Featured";
+import useScrollToTop from "../components/useScrollToTop";
 
 const PropertyInfo = () => {
+  useScrollToTop();
+
   const settings = {
     infinite: true,
     speed: 300,
@@ -32,14 +35,10 @@ const PropertyInfo = () => {
     <motion.div
       initial={{
         opacity: 0,
-        y: 200,
       }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
+      animate={{ opacity: 1 }}
       transition={{
-        duration: 1,
+        duration: 2,
       }}
       className="w-full min-h-screen bg-slate-50"
     >

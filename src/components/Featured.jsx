@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import duplex1 from "../img/duplex1.JPG";
 import duplex2 from "../img/duplex2.JPG";
 import duplex3 from "../img/duplex3.JPG";
@@ -9,44 +8,16 @@ import { FaLocationDot, FaNairaSign } from "react-icons/fa6";
 // Featured component to display featured properties
 const Featured = () => {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 200,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{
-        delay: 0.5,
-        duration: 1,
-      }}
-      className="mt-20 pb-20 pt-4 w-full px-4"
-    >
+    <div className="mt-20 pb-20 pt-4 w-full px-4">
       {/* Section heading */}
       <h2 className="text-xl text-left md:text-2xl border-b-2 border-gray-400 w-[12.5rem] mb-12 font-semibold ml-8">
         Featured <span className="text-[#992c99]">Properties</span>
       </h2>
 
       {/* Grid layout for featured properties */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-9 w-full mx-auto text-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full lg:ml-[4%] mx-auto text-center">
         {/* Featured Property 1 */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 200,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 1,
-            duration: 1,
-          }}
-          className="text-left rounded-lg shadow-lg py-4 px-1 hover:shadow-2xl"
-        >
+        <div className="text-left rounded-lg shadow-lg lg:w-[80%] py-4 px-1 hover:shadow-2xl">
           <div>
             <img
               src={duplex1}
@@ -78,24 +49,10 @@ const Featured = () => {
               </h3>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Featured Property 2 */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 200,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 1,
-            duration: 1,
-          }}
-          className="text-left rounded-lg shadow-lg py-4 px-1 hover:shadow-2xl"
-        >
+        <div className="text-left rounded-lg shadow-lg lg:w-[80%] py-4 px-1 hover:shadow-2xl">
           <div>
             <img
               src={duplex2}
@@ -127,24 +84,10 @@ const Featured = () => {
               </h3>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Featured Property 3 */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 200,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 1,
-            duration: 1,
-          }}
-          className="text-left rounded-lg shadow-lg py-4 px-1 hover:shadow-2xl"
-        >
+        <div className="text-left rounded-lg shadow-lg lg:w-[80%] py-4 px-1 hover:shadow-2xl">
           <div>
             <img
               src={duplex3}
@@ -176,9 +119,9 @@ const Featured = () => {
               </h3>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
