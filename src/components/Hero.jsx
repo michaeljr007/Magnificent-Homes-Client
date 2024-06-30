@@ -40,7 +40,7 @@ const Hero = () => {
         <li>
           <Link to={"/all-properties"}>
             <a
-              className="bg-white hover:text-purple-800 px-[1rem] md:px-[1.5rem] flex items-center gap-[0.2rem] md:gap-[0.5rem] py-[1rem] md:py-[0.8rem] text-[#992c99] no-underline rounded"
+              className="bg-white hover:text-purple-800 px-[1rem] md:px-[1.5rem] flex items-center gap-[0.2rem] md:gap-[0.5rem] py-[0.7rem] md:py-[0.8rem] text-[#992c99] no-underline rounded"
               href="#login"
             >
               View Listings <FaHome className="ml-1" />
@@ -50,7 +50,7 @@ const Hero = () => {
         <li>
           <a
             onClick={handleTourClick}
-            className="bg-[#992c99] text-white px-[1rem] md:px-[1.5rem] flex items-center gap-[0.2rem] md:gap-[0.5rem] py-[1rem] md:py-[0.8rem] no-underline rounded hover:bg-[#621c62]"
+            className="bg-[#992c99] text-white px-[1rem] md:px-[1.5rem] flex items-center gap-[0.2rem] md:gap-[0.5rem] py-[0.7rem] md:py-[0.8rem] no-underline rounded hover:bg-[#621c62]"
             href="#signup"
           >
             Book A Tour <FaRocket className="ml-1" />

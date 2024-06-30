@@ -10,7 +10,7 @@ const Featured = () => {
   return (
     <div className="mt-20 pb-20 pt-4 w-full px-4">
       {/* Section heading */}
-      <h2 className="text-xl text-left md:text-2xl border-b-2 border-gray-400 w-[12.5rem] mb-12 font-semibold ml-8">
+      <h2 className="text-xl text-left md:text-2xl border-b-2 border-gray-400 w-[12.3rem] lg:w-[14.3rem] mb-12 font-semibold ml-12">
         Featured <span className="text-[#992c99]">Properties</span>
       </h2>
 

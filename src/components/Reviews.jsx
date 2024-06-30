@@ -21,15 +21,15 @@ const Reviews = () => {
         delay: 0.5, // Delay before animation starts
         duration: 1, // Animation duration
       }}
-      className="mt-20 py-20 w-full bg-white border border-white px-4"
+      className="mt-12 pb-20 pt-14 w-full bg-white border border-white px-4"
     >
       {/* Section heading */}
-      <h2 className="text-xl text-center md:text-2xl border-b-2 border-gray-400 w-40 md:w-52 mx-auto font-semibold">
+      <h2 className="text-xl text-center md:text-2xl border-b-2 border-gray-400 w-[13rem] md:w-52 mx-auto font-semibold">
         What Our <span className="text-[#992c99]">Clients Say</span>
       </h2>
 
       {/* Grid for displaying reviews */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mt-8 text-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mt-9 text-center">
         {/* Review 1 */}
         <motion.div
           initial={{

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaNairaSign, FaLocationDot, FaBed, FaBath } from "react-icons/fa6";
 import { FaRocket } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -18,6 +18,8 @@ import useScrollToTop from "../components/useScrollToTop";
 
 const PropertyInfo = () => {
   useScrollToTop();
+  const [zoomedImage, setZoomedImage] = useState(null);
+  const [zoomedImageIndex, setZoomedImageIndex] = useState(0);
 
   const settings = {
     infinite: true,
@@ -27,9 +29,32 @@ const PropertyInfo = () => {
     className: "slides",
     nextArrow: <SampleNextArrow to="next" />,
     prevArrow: <SamplePrevArrow to="prev" />,
+    dots: true,
+    appendDots: (dots) => (
+      <div style={{ position: "relative", bottom: "33px" }}>
+        <ul style={{ margin: "0px", padding: "0px" }}>{dots}</ul>
+      </div>
+    ),
   };
 
   const images = [duplex1, duplex2, duplex3, duplex4, duplex5];
+
+  const handleImageClick = (index) => {
+    setZoomedImageIndex(index);
+    setZoomedImage(images[index]);
+  };
+
+  const handleCloseZoom = () => {
+    setZoomedImage(null);
+  };
+
+  const zoomedSliderSettings = {
+    ...settings,
+    initialSlide: zoomedImageIndex,
+    afterChange: (current) => setZoomedImageIndex(current),
+    nextArrow: null,
+    prevArrow: null,
+  };
 
   return (
     <motion.div
@@ -55,22 +80,12 @@ const PropertyInfo = () => {
                   <img
                     src={img}
                     alt={`Slide ${index + 1}`}
-                    className="w-full h-64 md:h-96 rounded-lg shadow-lg object-cover"
+                    className="w-full h-64 md:h-[70vh] rounded-lg shadow-lg object-cover cursor-pointer"
+                    onClick={() => handleImageClick(index)}
                   />
                 </div>
               ))}
             </Slider>
-            <div className="grid grid-cols-5 max-[450px]:hidden gap-1 mt-2">
-              {images.map((img, index) => (
-                <div key={index}>
-                  <img
-                    src={img}
-                    className="h-24 w-full object-cover rounded-lg"
-                    alt={`Thumbnail ${index + 1}`}
-                  />
-                </div>
-              ))}
-            </div>
           </div>
           <div className="md:w-1/3 w-full mt-6 md:mt-0 md:ml-6 bg-white p-4 rounded-2xl shadow-lg">
             <ul className="grid grid-cols-2 gap-2 items-center">
@@ -151,6 +166,29 @@ const PropertyInfo = () => {
         {/* Featured */}
         <Featured />
       </div>
+
+      {/* Modal for zoomed image */}
+      {zoomedImage !== null && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex items-center justify-center z-50"
+          onClick={handleCloseZoom}
+        >
+          <div className="lg:w-[59vw] w-[90vw] h-[90vh] mt-[35vh] lg:h-[70vh] lg:mt-[-5rem]">
+            <Slider {...zoomedSliderSettings}>
+              {images.map((img, index) => (
+                <div key={index}>
+                  <img
+                    src={img}
+                    alt={`Zoomed Slide ${index + 1}`}
+                    className="w-full object-contain rounded-lg shadow-lg"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 };

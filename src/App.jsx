@@ -24,7 +24,7 @@ function App() {
         setTimeout(() => {
           setIsLoading(false);
           localStorage.setItem("preloaderShown", "true");
-        }, 800);
+        }, 1500);
       };
 
       fakeDataFetch();

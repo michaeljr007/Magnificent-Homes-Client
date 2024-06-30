@@ -152,8 +152,8 @@ const Main = () => {
               className="w-64 md:w-80 rounded-md shadow-xl hover:shadow-2xl mx-auto"
             />
           </div>
-          <div className="about-text w-80 md:w-96 mt-8 md:mt-0 mx-auto">
-            <h1 className="text-xl md:text-2xl font-semibold">
+          <div className="about-text w-80 md:w-96 mt-8 md:mt-0 mx-auto pl-2">
+            <h1 className="text-lg md:text-2xl font-semibold">
               We Are The Best And Trusted{" "}
               <span className="text-[#992c99]">Real Estate</span> Agency
             </h1>
@@ -203,18 +203,18 @@ const Main = () => {
         transition={{ delay: 0.3, duration: 1 }}
         className="mt-20 py-20"
       >
-        <h2 className="text-2xl md:text-3xl border-b-2 border-gray-400 w-40 md:w-52 font-semibold mx-auto">
+        <h2 className="text-2xl md:text-3xl border-b-2 border-gray-400 w-[9.7rem] md:w-52 font-semibold mx-auto">
           How It <span className="text-[#992c99]">Works</span>
         </h2>
 
-        <div className="block md:grid md:grid-cols-3 w-full text-center mt-10 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full text-center mt-10 gap-5 md:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
             className="w-72 mx-auto"
           >
-            <img src={steps1} alt="" className="mx-auto" />
+            <img src={steps1} alt="" className="mx-auto pl-1 md:pl-0" />
             <h2 className="font-semibold text-lg mt-4">
               1. Search through and select a house of your choice
             </h2>
@@ -230,7 +230,7 @@ const Main = () => {
             transition={{ delay: 1, duration: 1 }}
             className="w-72 mx-auto"
           >
-            <img src={steps2} alt="" className="mx-auto" />
+            <img src={steps2} alt="" className="mx-auto pl-3 md:pl-0" />
             <h2 className="font-semibold text-lg mt-4">
               2. Book A Physical Tour With One Of Our Agents
             </h2>
@@ -246,7 +246,7 @@ const Main = () => {
             transition={{ delay: 1, duration: 1 }}
             className="w-72 mx-auto"
           >
-            <img src={steps3} alt="" className="mx-auto" />
+            <img src={steps3} alt="" className="mx-auto pl-8 md:pl-0" />
             <h2 className="font-semibold text-lg mt-4">
               3. Make Payment And Get Your Dream Home.
             </h2>
@@ -326,17 +326,17 @@ const Main = () => {
         initial={{ opacity: 0, y: 200 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="mt-20 py-20"
+        className="mt-10 py-20"
       >
-        <h2 className="text-2xl md:text-3xl border-b-2 border-gray-400 w-52 font-semibold mx-auto">
+        <h2 className="text-xl md:text-3xl border-b-2 border-gray-400 w-[18.5rem] pl-2 font-semibold mx-auto">
           Why You Should Work With Us
         </h2>
         <h4 className="text-center mt-4">
           We're Here To Satisfy All Your Housing Needs
         </h4>
 
-        <div className="block md:grid md:grid-cols-3 w-full text-center mt-10 gap-8">
-          <div className="w-72 mx-auto mb-8 md:mb-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full text-center mt-10 gap-4 md:gap-8">
+          <div className="w-72 mx-auto md:mb-0 transition hover:border hover:border-black p-3 hover:rounded-lg">
             <img src={vector2} alt="" className="mx-auto mb-3" />
             <h2 className="font-semibold text-lg">Wide range of properties</h2>
             <p className="text-sm mt-2">
@@ -345,7 +345,7 @@ const Main = () => {
             </p>
           </div>
 
-          <div className="w-72 mx-auto mb-8 md:mb-0">
+          <div className="w-72 mx-auto md:mb-0 transition hover:border hover:border-black p-3 hover:rounded-lg">
             <img src={vector1} alt="" className="mx-auto mb-3" />
             <h2 className="font-semibold text-lg">Buy or Rent Homes</h2>
             <p className="text-sm mt-2">
@@ -354,7 +354,7 @@ const Main = () => {
             </p>
           </div>
 
-          <div className="w-72 mx-auto">
+          <div className="w-72 mx-auto transition hover:border hover:border-black p-3 hover:rounded-lg">
             <img src={vector} alt="" className="mx-auto mb-3" />
             <h2 className="font-semibold text-lg">Trusted by Thousands</h2>
             <p className="text-sm mt-2">
@@ -370,29 +370,39 @@ const Main = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="mt-20 py-12 bg-cover bg-center"
+        className="mt-12 py-12 bg-cover bg-center w-[99vw] ml-[-3.8vw] relative"
         style={{
           backgroundImage: `url(${lovetolive1})`,
         }}
       >
-        <h2 className="text-xl text-center md:text-2xl font-semibold mt-8">
-          Discover a place you'll love to live
-        </h2>
-        <p className="text-center mt-2">
-          Every day is a journey, and the journey itself is home. <br /> A house
-          is made of walls and beams, a home is built with love and dreams.
-        </p>
-        <h4 className="text-center mt-4 font-semibold">
-          Find Your Dream Home Today!
-        </h4>
-        <div className="flex justify-center mt-8">
-          <Link to={"/all-properties"}>
-            <button className="bg-[#992c99] text-white px-4 md:px-8 py-2 md:py-4 rounded-2xl hover:bg-[#621c62] flex items-center gap-2">
-              View Properties <FaHome className="animate-bounce" />
-            </button>
-          </Link>
+        <div
+          className="bg-black w-full h-full opacity-40 absolute top-0 left-0"
+          style={{
+            zIndex: 1,
+          }}
+        ></div>
+        <div className="relative z-10 text-white">
+          <h2 className="text-xl text-center md:text-2xl font-semibold mt-8">
+            Discover a place you'll love to live
+          </h2>
+          <p className="text-center mt-2">
+            Every day is a journey, and the journey itself is home. <br /> A
+            house is made of walls and beams, a home is built with love and
+            dreams.
+          </p>
+          <h4 className="text-center mt-4 font-semibold">
+            Find Your Dream Home Today!
+          </h4>
+          <div className="flex justify-center mt-8">
+            <Link to={"/all-properties"}>
+              <button className="bg-[#992c99] text-white px-4 md:px-8 py-2 md:py-4 rounded-2xl hover:bg-[#621c62] flex items-center gap-2">
+                View Properties <FaHome className="animate-bounce" />
+              </button>
+            </Link>
+          </div>
         </div>
       </motion.div>
+
       {/* End Discover */}
 
       {/* Reviews */}

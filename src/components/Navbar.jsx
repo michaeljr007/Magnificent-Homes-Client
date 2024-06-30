@@ -36,11 +36,13 @@ const Navbar = () => {
         <h1 className="text-[1.7rem] text-[#992c99] max-[450px]:hidden font-bold">
           Magnificent Homes
         </h1>
-        <img
-          src={logo1}
-          alt=""
-          className="md:hidden w-[8rem] ml-[-4rem] mt-[-0.2rem]"
-        />
+        <Link to={"/"}>
+          <img
+            src={logo1}
+            alt=""
+            className="md:hidden w-[8rem] ml-[-4rem] mt-[-0.2rem]"
+          />
+        </Link>
       </div>
 
       {/* Mobile navbar toggle button */}

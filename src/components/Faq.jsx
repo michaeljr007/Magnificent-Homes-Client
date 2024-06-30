@@ -39,7 +39,7 @@ const Faq = () => {
   return (
     <div className="w-full p-4 py-20 bg-white">
       {/* Heading */}
-      <h2 className="text-2xl md:text-3xl font-bold mb-11 text-center flex justify-center items-center gap-1">
+      <h2 className="text-xl md:text-3xl font-bold mb-11 text-center flex justify-center items-center gap-1">
         Frequently Asked Questions
         <FaQuestion className="text-[#992c99] animate-pulse" />
       </h2>
