@@ -32,7 +32,7 @@ const PropertyColumn = ({ img, name, price, location }) => {
       transition={{
         duration: 1,
       }}
-      className="pb-5 pt-5 px-3 shadow-xl hover:shadow-2xl bg-white rounded-lg w-[93%] md:w-[85%] max-w-[95%] mx-auto mb-6"
+      className="pb-6 pt-5 px-3 shadow-xl hover:shadow-2xl bg-white rounded-lg w-[93%] md:w-[85%] max-w-[95%] mx-auto mb-6"
     >
       {/* Property name */}
       <h1 className="mb-2 text-[#992c99] font-bold text-sm">{name}</h1>
@@ -77,7 +77,7 @@ const PropertyColumn = ({ img, name, price, location }) => {
         et facere animi!
       </p>
       {/* Links for more info and booking a tour */}
-      <ul className="flex gap-3 sm:gap-4 mt-2">
+      <ul className="flex gap-3 sm:gap-4 mt-4">
         <li>
           <Link to={"/property-info"}>
             <button className="bg-[#992c99] px-3 py-[0.7rem] flex items-center text-white no-underline rounded hover:bg-[#7d257d] hover:text-white text-xs md:text-sm">
