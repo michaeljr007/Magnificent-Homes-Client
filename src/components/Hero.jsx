@@ -36,7 +36,7 @@ const Hero = () => {
       </h1>
 
       {/* Action buttons */}
-      <ul className="take-action flex gap-[1rem] md:gap-[2rem] justify-center mt-[39vh] md:mt-[4.8rem]">
+      <ul className="take-action flex gap-[1rem] md:gap-[2rem] mt-[39vh] md:mt-[4.8rem] ml-[7vw] md:ml-0 md:justify-center">
         <li>
           <Link to={"/all-properties"}>
             <a

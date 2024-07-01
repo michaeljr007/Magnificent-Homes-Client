@@ -58,7 +58,7 @@ const Navbar = () => {
       {/* Navbar links */}
       <ul className="hidden bg-[purple] max-[450px]:z-10 max-[450px]:p-[1rem] ml-[-4.9rem] md:ml-0 max-[450px]:h-[58vh] max-[450px]:w-[98vw] md:bg-transparent mt-[4.5rem] md:mt-[0rem] navbar md:flex gap-[3rem] pt-[0.5rem] max-[450px]:absolute">
         <Link to={"/"}>
-          <li className="text-white md:text-[#c44ac4] max-[450px]:mb-[0.6rem]">
+          <li className="text-white md:text-[#c44ac4] max-[450px]:mb-[0.6rem] pt-2 pb-3">
             <a
               className="no-underline hover:text-[#f065f0] md:text-[#992c99] md:hover:text-[#fa70fa]"
               href="#home"
@@ -72,7 +72,7 @@ const Navbar = () => {
           <Link to={"/all-properties"}>
             <a
               href="#properties"
-              className="no-underline hover:text-[#f065f0] md:text-[#992c99] md:hover:text-[#fa70fa]"
+              className="no-underline hover:text-[#f065f0] md:text-[#992c99] pt-2 pb-3 md:hover:text-[#fa70fa]"
             >
               All Properties
             </a>
@@ -82,7 +82,7 @@ const Navbar = () => {
         {/* Dropdown menu for Categories */}
         <li className="max-[450px]:mb-[0.6rem]">
           <div className="dropdown relative inline-block">
-            <button className="dropbtn max-[450px]:text-white md:text-[#992c99] md:hover:text-[#fa70fa] border-none text-[17px]">
+            <button className="dropbtn max-[450px]:text-white pt-2 pb-3 md:text-[#992c99] md:hover:text-[#fa70fa] border-none text-[17px]">
               Categories
             </button>
             <div className="dropdown-content hidden bg-[#f1f1f1] min-w-[160px] absolute z-[1] shadow-xl">
@@ -117,7 +117,7 @@ const Navbar = () => {
         {/* Dropdown menu for About Us */}
         <li className="max-[450px]:mb-[0.8rem]">
           <div className="dropdown relative inline-block">
-            <button className="dropbtn max-[450px]:text-white md:text-[#c44ac4] border-none text-[17px]">
+            <button className="dropbtn max-[450px]:text-white pt-0 pb-3 md:text-[#c44ac4] border-none text-[17px]">
               About Us
             </button>
             <div className="dropdown-content hidden bg-[#f1f1f1] min-w-[160px] absolute z-[1] shadow-xl">
@@ -153,10 +153,10 @@ const Navbar = () => {
         <li>
           <div>
             <ul className="block md:flex gap-[1rem]">
-              <li className="max-[450px]:mb-[1.2rem]">
+              <li className="max-[450px]:mb-[2rem]">
                 <Link to={"/login"}>
                   <a
-                    className="bg-[#992c99] px-[1.5rem] py-[0.5rem] text-white no-underline rounded hover:bg-[#691d69]"
+                    className="bg-[#992c99] px-[1.5rem] py-[0.5rem] pt-2 pb-3 text-white no-underline rounded hover:bg-[#691d69]"
                     href="#login"
                   >
                     Login
@@ -166,7 +166,7 @@ const Navbar = () => {
               <li>
                 <Link to={"/signup"}>
                   <a
-                    className="bg-[#992c99] px-[1.5rem] py-[0.5rem] text-white no-underline rounded hover:bg-[#691d69]"
+                    className="bg-[#992c99] px-[1.5rem] py-[0.5rem] pt-2 pb-3 text-white no-underline rounded hover:bg-[#691d69]"
                     href="#signup"
                   >
                     Register
