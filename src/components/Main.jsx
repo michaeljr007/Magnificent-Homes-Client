@@ -121,7 +121,7 @@ const Main = () => {
       </h2>
 
       {/* Property Column */}
-      <div className="properties block md:grid md:grid-cols-3 gap-8 pt-16 md:ml-5">
+      <div className="properties grid grid-cols-1 md:grid-cols-3 gap-6 pt-16 ml-[6%]">
         {propertiesData.map((property) => (
           <PropertyColumn
             key={property.id}
@@ -138,7 +138,7 @@ const Main = () => {
         initial={{ opacity: 0, y: 200 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="max-w-lg mx-auto pt-12 pb-10 md:pb-20 mt-16 md:px-16 bg-white rounded-xl shadow-md"
+        className="md:max-w-[90%] max-w-[100%] mx-auto pt-12 pb-10 md:pb-20 mt-16 md:px-9 bg-white rounded-xl shadow-md"
       >
         <h2 className="text-2xl md:text-3xl border-b-2 border-gray-400 w-28 md:w-40 font-semibold mx-auto">
           <span className="text-[#992c99]">About</span> Us
@@ -149,15 +149,15 @@ const Main = () => {
             <img
               src={personLogo1}
               alt=""
-              className="w-64 md:w-80 rounded-md shadow-xl hover:shadow-2xl mx-auto"
+              className="w-64 md:w-[27rem] rounded-md shadow-xl hover:shadow-2xl mx-auto md:mt-[-2rem]"
             />
           </div>
-          <div className="about-text w-80 md:w-96 mt-8 md:mt-0 mx-auto pl-2">
-            <h1 className="text-lg md:text-2xl font-semibold">
+          <div className="about-text w-80 md:w-96 mt-8 md:mt-0 mx-auto pl-0 md:pl-2">
+            <h1 className="text-lg md:text-2xl max-[450px]:pl-1 font-semibold">
               We Are The Best And Trusted{" "}
               <span className="text-[#992c99]">Real Estate</span> Agency
             </h1>
-            <p className="mt-3">
+            <p className="mt-3 max-[450px]:pl-1">
               Lorem ipsum, dolor sit amet Quasi et asperiores quidem, eius
               maiores inventore facilis repudiandae.
             </p>
@@ -203,7 +203,7 @@ const Main = () => {
         transition={{ delay: 0.3, duration: 1 }}
         className="mt-20 py-20"
       >
-        <h2 className="text-2xl md:text-3xl border-b-2 border-gray-400 w-[9.7rem] md:w-52 font-semibold mx-auto">
+        <h2 className="text-2xl md:text-3xl border-b-2 border-gray-400 w-[9.7rem] md:w-[12rem] font-semibold mx-auto">
           How It <span className="text-[#992c99]">Works</span>
         </h2>
 
@@ -211,7 +211,7 @@ const Main = () => {
           <motion.div
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 0.7, duration: 1 }}
             className="w-72 mx-auto"
           >
             <img src={steps1} alt="" className="mx-auto pl-1 md:pl-0" />
@@ -227,7 +227,7 @@ const Main = () => {
           <motion.div
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 1.2, duration: 1 }}
             className="w-72 mx-auto"
           >
             <img src={steps2} alt="" className="mx-auto pl-3 md:pl-0" />
@@ -243,7 +243,7 @@ const Main = () => {
           <motion.div
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: 1.6, duration: 1 }}
             className="w-72 mx-auto"
           >
             <img src={steps3} alt="" className="mx-auto pl-8 md:pl-0" />
@@ -271,7 +271,7 @@ const Main = () => {
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
-            className="w-72 mx-auto mb-8 md:mb-0"
+            className="w-72 mx-auto cursor-pointer mb-8 md:mb-0"
           >
             <img
               src={lagos1}
@@ -288,7 +288,7 @@ const Main = () => {
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
-            className="w-72 mx-auto mb-8 md:mb-0"
+            className="w-72 mx-auto cursor-pointer mb-8 md:mb-0"
           >
             <img
               src={enugu2}
@@ -305,7 +305,7 @@ const Main = () => {
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
-            className="w-72 mx-auto"
+            className="w-72 mx-auto cursor-pointer"
           >
             <img
               src={abuja2}
@@ -328,7 +328,7 @@ const Main = () => {
         transition={{ delay: 0.5, duration: 1 }}
         className="mt-10 py-20"
       >
-        <h2 className="text-xl md:text-3xl border-b-2 border-gray-400 w-[18.5rem] pl-2 font-semibold mx-auto">
+        <h2 className="text-xl md:text-3xl border-b-2 border-gray-400 w-[19.2rem] md:w-[27.5rem] pl-2 font-semibold mx-auto">
           Why You Should Work With Us
         </h2>
         <h4 className="text-center mt-4">
@@ -370,7 +370,7 @@ const Main = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="mt-12 py-12 bg-cover bg-center w-[99vw] ml-[-3.8vw] relative"
+        className="mt-12 py-12 bg-cover bg-center w-[99vw] h-[65vh] md:h-[80vh] ml-[-3.8vw] relative"
         style={{
           backgroundImage: `url(${lovetolive1})`,
         }}
@@ -381,8 +381,8 @@ const Main = () => {
             zIndex: 1,
           }}
         ></div>
-        <div className="relative z-10 text-white">
-          <h2 className="text-xl text-center md:text-2xl font-semibold mt-8">
+        <div className="relative z-10 text-white pt-6 md:pt-12">
+          <h2 className="text-xl text-center md:text-[1.7rem] font-semibold mt-8">
             Discover a place you'll love to live
           </h2>
           <p className="text-center mt-2">
@@ -395,7 +395,7 @@ const Main = () => {
           </h4>
           <div className="flex justify-center mt-8">
             <Link to={"/all-properties"}>
-              <button className="bg-[#992c99] text-white px-4 md:px-8 py-2 md:py-4 rounded-2xl hover:bg-[#621c62] flex items-center gap-2">
+              <button className="bg-[#992c99] text-white px-4 md:px-8 py-2 md:py-4 rounded-2xl hover:bg-[#621c62] transition flex items-center gap-2">
                 View Properties <FaHome className="animate-bounce" />
               </button>
             </Link>

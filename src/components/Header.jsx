@@ -33,12 +33,12 @@ const Header = () => {
       viewport={{
         amount: "all",
       }}
-      className="w-[99vw] h-[100vh]"
+      className="w-[98.7vw] h-[100vh]"
     >
       {/* Background video */}
       <video
         ref={videoRef}
-        className="w-[100vw] max-[450px]:h-[90vh] h-[93vh] mt-[-1rem] absolute object-cover z-[-1]"
+        className="w-[98.7vw] max-[450px]:h-[90vh] h-[93vh] mt-[-1rem] absolute object-cover z-[-1]"
         src={mybg}
         autoPlay
         loop
@@ -47,7 +47,7 @@ const Header = () => {
       ></video>
 
       {/* Overlay to darken the video */}
-      <div className="bg-black w-[99.6vw] max-[450px]:h-[90vh] h-[93vh] mt-[-1rem] absolute opacity-50 z-[-1]"></div>
+      <div className="bg-black w-[98.7vw] max-[450px]:h-[90vh] h-[93vh] mt-[-1rem] absolute opacity-50 z-[-1]"></div>
 
       {/* Navbar and Hero components */}
       <Navbar />

@@ -13,6 +13,7 @@ import duplex5 from "../img/duplex5.JPG";
 import { IoHome } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { MdMenu, MdCancel } from "react-icons/md";
+import useScrollToTop from "../components/useScrollToTop";
 
 const propertiesData = [
   {
@@ -98,6 +99,7 @@ const propertiesData = [
 ];
 
 const AllPropertiesPage = () => {
+  useScrollToTop();
   const [filteredType, setFilteredType] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
 

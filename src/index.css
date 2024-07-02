@@ -75,10 +75,6 @@
 }
 
 @media (max-width: 375px) {
-  .properties {
-    margin-left: 0.5rem;
-  }
-
   .discover {
     /* margin-left: -1rem; */
   }

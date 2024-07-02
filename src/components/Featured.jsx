@@ -15,7 +15,7 @@ const Featured = () => {
       </h2>
 
       {/* Grid layout for featured properties */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full lg:ml-[4%] mx-auto text-center">
+      <div className="grid grid-cols-1 cursor-pointer md:grid-cols-3 gap-5 w-full lg:ml-[4%] mx-auto text-center">
         {/* Featured Property 1 */}
         <div className="text-left rounded-lg shadow-lg lg:w-[80%] py-4 px-1 hover:shadow-2xl">
           <div>

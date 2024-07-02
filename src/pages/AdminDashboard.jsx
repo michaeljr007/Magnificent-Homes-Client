@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaHome, FaPlus, FaSignOutAlt, FaBars, FaTimes } from "react-icons/fa";
+import useScrollToTop from "../components/useScrollToTop";
 
 let properties = [
   {
@@ -21,6 +22,7 @@ let properties = [
 ];
 
 const AdminDashboard = () => {
+  useScrollToTop();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);

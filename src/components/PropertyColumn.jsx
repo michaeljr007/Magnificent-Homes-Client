@@ -32,7 +32,7 @@ const PropertyColumn = ({ img, name, price, location }) => {
       transition={{
         duration: 1,
       }}
-      className="pb-6 pt-5 px-3 shadow-xl hover:shadow-2xl bg-white rounded-lg w-[93%] md:w-[85%] max-w-[95%] mx-auto mb-6"
+      className="pb-6 pt-5 md:pt-2 md:pb-4 px-3 shadow-xl hover:shadow-2xl bg-white rounded-lg w-[93%] md:w-[82%] max-w-[95%] mb-6"
     >
       {/* Property name */}
       <h1 className="mb-2 text-[#992c99] font-bold text-sm">{name}</h1>

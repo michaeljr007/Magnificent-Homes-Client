@@ -11,6 +11,7 @@ import {
   FaTimes,
   FaEdit,
 } from "react-icons/fa";
+import useScrollToTop from "../components/useScrollToTop";
 
 const properties = [
   {
@@ -31,6 +32,7 @@ const properties = [
 ];
 
 const UserDashboard = () => {
+  useScrollToTop();
   const [showProfile, setShowProfile] = useState(false);
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);

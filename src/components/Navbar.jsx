@@ -156,7 +156,7 @@ const Navbar = () => {
               <li className="max-[450px]:mb-[2rem]">
                 <Link to={"/login"}>
                   <a
-                    className="bg-[#992c99] px-[1.5rem] py-[0.5rem] max-[450px]:pt-2 max-[450px]:pb-3 text-white no-underline rounded hover:bg-[#691d69]"
+                    className="bg-[#992c99] px-[1.5rem] py-[0.5rem] max-[450px]:pt-2 max-[450px]:pb-3 text-white no-underline transition rounded hover:bg-[#691d69]"
                     href="#login"
                   >
                     Login
@@ -166,7 +166,7 @@ const Navbar = () => {
               <li>
                 <Link to={"/signup"}>
                   <a
-                    className="bg-[#992c99] px-[1.5rem] py-[0.5rem] max-[450px]:pt-2 max-[450px]:pb-3 text-white no-underline rounded hover:bg-[#691d69]"
+                    className="bg-[#992c99] px-[1.5rem] py-[0.5rem] max-[450px]:pt-2 max-[450px]:pb-3 text-white transition no-underline rounded hover:bg-[#691d69]"
                     href="#signup"
                   >
                     Register

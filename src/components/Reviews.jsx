@@ -24,7 +24,7 @@ const Reviews = () => {
       className="mt-12 pb-20 pt-14 w-full bg-white border border-white px-4"
     >
       {/* Section heading */}
-      <h2 className="text-xl text-center md:text-2xl border-b-2 border-gray-400 w-[13rem] md:w-52 mx-auto font-semibold">
+      <h2 className="text-xl text-center md:text-2xl border-b-2 border-gray-400 w-[13rem] md:w-[15.8rem] mx-auto font-semibold">
         What Our <span className="text-[#992c99]">Clients Say</span>
       </h2>
 
@@ -34,11 +34,11 @@ const Reviews = () => {
         <motion.div
           initial={{
             opacity: 0,
-            y: 200,
+            x: -200,
           }}
           whileInView={{
             opacity: 1,
-            y: 0,
+            x: 0,
           }}
           transition={{
             delay: 1, // Delay before animation starts
@@ -77,14 +77,14 @@ const Reviews = () => {
         <motion.div
           initial={{
             opacity: 0,
-            y: 200,
+            x: -200,
           }}
           whileInView={{
             opacity: 1,
-            y: 0,
+            x: 0,
           }}
           transition={{
-            delay: 1, // Delay before animation starts
+            delay: 1.3, // Delay before animation starts
             duration: 1, // Animation duration
           }}
           className="text-left rounded-lg shadow-lg p-4 hover:shadow-2xl"
@@ -116,14 +116,14 @@ const Reviews = () => {
         <motion.div
           initial={{
             opacity: 0,
-            y: 200,
+            x: -200,
           }}
           whileInView={{
             opacity: 1,
-            y: 0,
+            x: 0,
           }}
           transition={{
-            delay: 1, // Delay before animation starts
+            delay: 1.6, // Delay before animation starts
             duration: 1, // Animation duration
           }}
           className="text-left rounded-lg shadow-lg p-4 hover:shadow-2xl"
