@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
-import mybg from "../videos/mybg.mp4";
+import mybg from "../assets/videos/mybg.mp4";
 import { motion } from "framer-motion";
 
 const Header = () => {

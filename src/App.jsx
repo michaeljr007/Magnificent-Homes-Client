@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
@@ -6,10 +7,10 @@ import Login from "./pages/Login";
 import PropertyInfo from "./pages/Property-info";
 import AllProperties from "./pages/All-properties";
 import AdminDashboard from "./pages/AdminDashboard";
-import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import FloatingButton from "./components/FloatingButton";
 import NewsletterForm from "./components/NewsLetterForm";
+import SignupSuccess from "./pages/SignupSuccess";
 
 function App() {
   // Preloader state
@@ -50,6 +51,7 @@ function App() {
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
             <Route path="/property-info" element={<PropertyInfo />} />
             <Route path="/all-properties" element={<AllProperties />} />
+            <Route path="/signup-success" element={<SignupSuccess />} />
           </Routes>
           <FloatingButton />
         </div>

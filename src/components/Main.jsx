@@ -4,26 +4,26 @@ import { FaFire, FaHome } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import { motion } from "framer-motion";
 import PropertyColumn from "./PropertyColumn";
-import bongalo1 from "../img/bongalo1.JPG";
-import duplex1 from "../img/duplex1.JPG";
-import duplex2 from "../img/duplex2.JPG";
-import bongalo2 from "../img/bongalo2.JPG";
-import duplex3 from "../img/duplex3.JPG";
-import bongalo3 from "../img/bongalo3.JPG";
-import bongalo4 from "../img/bongalo4.JPG";
-import duplex4 from "../img/duplex4.JPG";
-import duplex5 from "../img/duplex5.JPG";
-import personLogo1 from "../img/person-logo1.jpeg";
-import steps1 from "../img/steps1.png";
-import steps2 from "../img/steps2.png";
-import steps3 from "../img/steps3.png";
-import lagos1 from "../img/lagos1.jpg";
-import enugu2 from "../img/enugu2.jpg";
-import abuja2 from "../img/abuja2.jpg";
-import vector from "../img/Vector.png";
-import vector1 from "../img/Vector 1.png";
-import vector2 from "../img/Vector 2.png";
-import lovetolive1 from "../img/lovetolive1.jpg";
+import bongalo1 from "../assets/img/bongalo1.JPG";
+import duplex1 from "../assets/img/duplex1.JPG";
+import duplex2 from "../assets/img/duplex2.JPG";
+import bongalo2 from "../assets/img/bongalo2.JPG";
+import duplex3 from "../assets/img/duplex3.JPG";
+import bongalo3 from "../assets/img/bongalo3.JPG";
+import bongalo4 from "../assets/img/bongalo4.JPG";
+import duplex4 from "../assets/img/duplex4.JPG";
+import duplex5 from "../assets/img/duplex5.JPG";
+import personLogo1 from "../assets/img/person-logo1.jpeg";
+import steps1 from "../assets/img/steps1.png";
+import steps2 from "../assets/img/steps2.png";
+import steps3 from "../assets/img/steps3.png";
+import lagos1 from "../assets/img/lagos1.jpg";
+import enugu2 from "../assets/img/enugu2.jpg";
+import abuja2 from "../assets/img/abuja2.jpg";
+import vector from "../assets/img/Vector.png";
+import vector1 from "../assets/img/Vector 1.png";
+import vector2 from "../assets/img/Vector 2.png";
+import lovetolive1 from "../assets/img/lovetolive1.jpg";
 import { Link } from "react-router-dom";
 import Reviews from "./Reviews";
 import Featured from "./Featured";
@@ -121,7 +121,7 @@ const Main = () => {
       </h2>
 
       {/* Property Column */}
-      <div className="properties grid grid-cols-1 md:grid-cols-3 gap-6 pt-16 ml-[6%]">
+      <div className="properties grid grid-cols-1 md:grid-cols-3 gap-6 pt-16">
         {propertiesData.map((property) => (
           <PropertyColumn
             key={property.id}

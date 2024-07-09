@@ -1,7 +1,7 @@
 import React from "react";
-import duplex1 from "../img/duplex1.JPG";
-import duplex2 from "../img/duplex2.JPG";
-import duplex3 from "../img/duplex3.JPG";
+import duplex1 from "../assets/img/duplex1.JPG";
+import duplex2 from "../assets/img/duplex2.JPG";
+import duplex3 from "../assets/img/duplex3.JPG";
 import { FaStar } from "react-icons/fa";
 import { FaLocationDot, FaNairaSign } from "react-icons/fa6";
 

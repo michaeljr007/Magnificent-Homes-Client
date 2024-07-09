@@ -2,13 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
-import lekkiBridge1 from "../img/LekkiBridge1.jpg";
-import logo1 from "../img/logo1.png";
+import lekkiBridge1 from "../assets/img/LekkiBridge1.jpg";
+import logo1 from "../assets/img/logo1.png";
 import { FaLocationDot } from "react-icons/fa6";
 import useScrollToTop from "../components/useScrollToTop";
 
 const Login = () => {
   useScrollToTop();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

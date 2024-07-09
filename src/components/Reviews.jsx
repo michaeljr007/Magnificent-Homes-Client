@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion"; // Importing motion from Framer Motion
-import review1 from "../img/review1.png"; // Importing review images
-import review2 from "../img/review2.png";
-import review3 from "../img/review3.png";
-import vectorQuote from "../img/vector-qoute.png"; // Importing vector quote image
+import review1 from "../assets/img/review1.png"; // Importing review images
+import review2 from "../assets/img/review2.png";
+import review3 from "../assets/img/review3.png";
+import vectorQuote from "../assets/img/vector-qoute.png"; // Importing vector quote image
 import { FaStar } from "react-icons/fa"; // Importing Star icon from React Icons
 
 const Reviews = () => {

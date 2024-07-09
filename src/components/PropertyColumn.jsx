@@ -32,7 +32,7 @@ const PropertyColumn = ({ img, name, price, location }) => {
       transition={{
         duration: 1,
       }}
-      className="pb-6 pt-5 md:pt-2 md:pb-4 px-3 shadow-xl hover:shadow-2xl bg-white rounded-lg w-[93%] md:w-[82%] max-w-[95%] mb-6"
+      className="pb-5 pt-5 md:pt-2 md:pb-4 px-3 mx-auto shadow-xl hover:shadow-2xl bg-white rounded-lg w-[92%] md:w-[82%] max-w-[95%] mb-6"
     >
       {/* Property name */}
       <h1 className="mb-2 text-[#992c99] font-bold text-sm">{name}</h1>
@@ -40,11 +40,11 @@ const PropertyColumn = ({ img, name, price, location }) => {
       <img
         src={img}
         alt=""
-        className="w-full h-36 lg:h-[11rem] mb-3 object-cover"
+        className="w-full h-[12.7rem] lg:h-[11rem] mb-3 object-cover"
       />
       {/* Heart icon for like */}
       <span
-        className="absolute cursor-pointer mt-[-9rem] lg:mt-[-9.5rem] ml-[14.25rem] md:ml-[13.5rem] lg:ml-[17rem]"
+        className="absolute cursor-pointer mt-[-13rem] lg:mt-[-9.5rem] ml-[15.55rem] md:ml-[13.5rem] lg:ml-[17rem]"
         onClick={toggleLiked}
       >
         {isClicked ? (

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../img/logo1.png";
+import logo from "../assets/img/logo1.png";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 

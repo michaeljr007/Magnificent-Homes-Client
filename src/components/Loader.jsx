@@ -1,5 +1,5 @@
 import React from "react";
-import loader from "../img/logo1.png"; // Importing the loader image
+import loader from "../assets/img/logo1.png"; // Importing the loader image
 
 //Loader component
 const Loader = () => {
