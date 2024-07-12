@@ -7,8 +7,8 @@ const ProfileSlice = createSlice({
     addProfile: (state, action) => {
       state.push(action.payload);
     },
-    removeProfile: (state) => {
-      state = [];
+    removeProfile: () => {
+      return [];
     },
   },
 });

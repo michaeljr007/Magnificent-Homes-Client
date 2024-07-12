@@ -32,31 +32,34 @@ const PropertyColumn = ({ img, name, price, location }) => {
       transition={{
         duration: 1,
       }}
-      className="pb-5 pt-5 md:pt-2 md:pb-4 px-3 mx-auto shadow-xl hover:shadow-2xl bg-white rounded-lg w-[92%] md:w-[82%] max-w-[95%] mb-6"
+      className="pb-5 pt-5 md:pt-2 md:pb-4 px-3 mx-auto shadow-xl hover:shadow-2xl bg-white rounded-lg w-[90%] md:w-[82%] max-w-[95%] mb-6"
     >
       {/* Property name */}
       <h1 className="mb-2 text-[#992c99] font-bold text-sm">{name}</h1>
-      {/* Property image */}
-      <img
-        src={img}
-        alt=""
-        className="w-full h-[12.7rem] lg:h-[11rem] mb-3 object-cover"
-      />
-      {/* Heart icon for like */}
-      <span
-        className="absolute cursor-pointer mt-[-13rem] lg:mt-[-9.5rem] ml-[15.55rem] md:ml-[13.5rem] lg:ml-[17rem]"
-        onClick={toggleLiked}
-      >
-        {isClicked ? (
-          <FaHeart className="text-[#992c99] text-xl" />
-        ) : (
-          <FaRegHeart className="text-white text-xl" />
-        )}
-      </span>
+      {/* Property image and heart icon container */}
+      <div className="relative">
+        {/* Property image */}
+        <img
+          src={img}
+          alt=""
+          className="w-full h-[12.7rem] lg:h-[11rem] mb-3 object-cover"
+        />
+        {/* Heart icon for like */}
+        <span
+          className="absolute top-2 right-2 cursor-pointer"
+          onClick={toggleLiked}
+        >
+          {isClicked ? (
+            <FaHeart className="text-[#992c99] text-xl" />
+          ) : (
+            <FaRegHeart className="text-white text-xl" />
+          )}
+        </span>
+      </div>
       {/* Location and bed/bath icons */}
       <h3 className="flex justify-between mb-2 text-xs md:text-sm">
         <span className="flex gap-1">
-          <FaLocationDot className=" text-[#992c99]" /> {location}
+          <FaLocationDot className="text-[#992c99]" /> {location}
         </span>
         <span className="flex gap-2">
           <span className="flex gap-1">

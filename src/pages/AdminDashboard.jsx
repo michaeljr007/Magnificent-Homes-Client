@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaHome, FaPlus, FaSignOutAlt, FaBars, FaTimes } from "react-icons/fa";
 import useScrollToTop from "../components/useScrollToTop";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { removeProfile } from "../redux/slices/ProfileSlice";
+import { useNavigate } from "react-router-dom";
 
 let properties = [
   {
@@ -24,6 +27,9 @@ let properties = [
 
 const AdminDashboard = () => {
   useScrollToTop();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const State = useSelector((state) => state);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
@@ -43,6 +49,15 @@ const AdminDashboard = () => {
     bathrooms: "",
     bedrooms: "",
   });
+
+  const userProfile = State.Profile[0];
+  console.log(userProfile);
+
+  useEffect(() => {
+    if (userProfile === undefined) {
+      navigate("/");
+    }
+  }, [userProfile, navigate]);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -152,8 +167,27 @@ const AdminDashboard = () => {
     }
   };
 
+  const logoutHandler = () => {
+    if (window.confirm("Log out?")) {
+      dispatch(removeProfile());
+      navigate("/");
+    }
+  };
+
   return (
-    <div className="flex min-h-screen">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 2,
+        delay: 1.5,
+      }}
+      className="flex min-h-screen"
+    >
       {/* Sidebar */}
       <div
         className={`fixed md:static inset-0 z-50 bg-gray-800 text-white w-64 p-6 transition-transform duration-300 ${
@@ -182,7 +216,7 @@ const AdminDashboard = () => {
           <li
             className="flex items-center space-x-3 cursor-pointer"
             onClick={() => {
-              alert("Logged out!");
+              logoutHandler();
               setSidebarOpen(false);
             }}
           >
@@ -445,7 +479,7 @@ const AdminDashboard = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

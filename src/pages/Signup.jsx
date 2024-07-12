@@ -39,25 +39,38 @@ const Signup = () => {
       const response = await axios.post("/api/v1/users/signup", formData);
       const { data } = response;
 
-      console.log(data.msg);
-
       if (data.msg === "User Created") {
         navigate("/signup-success");
       }
     } catch (error) {
-      let errDiv = document.querySelector(".error-div");
+      const {
+        response: {
+          data: { errors: errorArr },
+        },
+      } = error;
 
       const {
         response: {
-          data: { msg: text },
+          data: { msg: adminCodeErr },
         },
       } = error;
-      errDiv.textContent = text;
-      errDiv.classList.toggle("hidden");
 
-      setTimeout(() => {
+      if (adminCodeErr) {
+        alert(adminCodeErr);
+      }
+
+      if (errorArr) {
+        let errDiv = document.querySelector(".error-div");
+        let errorMsg = errorArr[0];
+
+        errDiv.textContent = errorMsg.msg;
+
         errDiv.classList.toggle("hidden");
-      }, 2000);
+
+        setTimeout(() => {
+          errDiv.classList.toggle("hidden");
+        }, 2000);
+      }
     }
   };
 
@@ -95,7 +108,6 @@ const Signup = () => {
               name="firstname"
               id="firstname"
               placeholder="First name"
-              required
               value={formData.firstname}
               onChange={handleChange}
               className="border border-gray-400 py-2 px-4 w-full rounded mb-3"

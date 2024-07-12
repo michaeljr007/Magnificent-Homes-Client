@@ -1,14 +1,27 @@
 import React from "react";
 import logo1 from "../assets/img/logo1.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // Navbar component
 const Navbar = () => {
-  let user = false;
+  // Get Profile from state
+  const State = useSelector((state) => state);
+  const navigate = useNavigate();
+
+  const userProfile = State.Profile[0];
+  console.log(userProfile);
+
+  const dashboardNavigate = () => {
+    if (userProfile.role === "admin") {
+      navigate("/admin-dashboard");
+    } else if (userProfile.role === "regular") {
+      navigate("/dashboard");
+    }
+  };
+
   // Function to handle the toggle of the navbar in mobile view
   const handleToggle = (e) => {
-    console.log("Clicked");
-
     // Selecting DOM elements for the navbar and lines for the toggle button
     const navbar = document.querySelector(".navbar");
     const firstLine = document.querySelector(".first-line");
@@ -153,7 +166,7 @@ const Navbar = () => {
         {/* Login and Register links */}
         <li>
           <div>
-            {!user ? (
+            {!userProfile ? (
               <ul className="block lg:flex gap-[1rem]">
                 <li className="max-[900px]:mb-[2rem]">
                   <Link to={"/login"}>
@@ -177,12 +190,12 @@ const Navbar = () => {
                 </li>
               </ul>
             ) : (
-              <a
-                className="bg-[#992c99] px-[1.5rem] py-[0.5rem] max-[900px]:pt-2 max-[900px]:pb-3 text-white transition no-underline rounded hover:bg-[#691d69]"
-                href="#signup"
+              <button
+                onClick={dashboardNavigate}
+                className="bg-[#992c99] px-[1.5rem] py-[0.5rem] max-[900px]:pt-2 max-[900px]:pb-3 text-white transition no-underline rounded hover:bg-[#691d69] lg:mt-[-0.5rem]"
               >
-                Register
-              </a>
+                Dashboard
+              </button>
             )}
           </div>
         </li>
